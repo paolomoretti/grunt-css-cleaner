@@ -33,14 +33,12 @@ module.exports = function (grunt) {
 
     // Configuration to be run (and then tested).
     css_cleaner: {
-      default_options: {
-        options: {
-        },
+      ui: {
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/scss': ['test/fixtures/**/*.*']
         }
-      },
-      custom_options: {
+      }/*,
+      css: {
         options: {
           separator: ': ',
           punctuation: ' !!!'
@@ -48,7 +46,7 @@ module.exports = function (grunt) {
         files: {
           'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
         }
-      }
+      }*/
     },
 
     // Unit tests.
@@ -67,5 +65,8 @@ module.exports = function (grunt) {
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
+
+  // DEVELOPMENT
+  grunt.registerTask('dev', ['css_cleaner']);
 
 };
