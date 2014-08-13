@@ -15,12 +15,19 @@ module.exports = function (grunt) {
 
   grunt.registerMultiTask('css_cleaner', 'Clean your unused css classes from your app', function () {
 
-    // Merge task-specific and/or target-specific options with these defaults.
-//    var options = this.options();
+    var _this = this;
 
-//    console.log ("bootstrap", this);
+    // Merge task-specific and/or target-specific options with these defaults.
+    var options = this.options({
+      writeReport: false
+    });
+
+    console.log ("bootstrap", this);
 
     // Iterate over all specified file groups.
+
+    var reportContent = "";
+
     this.files.forEach(function (filePaths) {
 
       var cssRules = [];
@@ -32,7 +39,7 @@ module.exports = function (grunt) {
 
 
       });
-      console.log ("Found " + cssRules.length + " css rules in " + filePaths.src.length + " files");
+      reportContent += "==> "+_this.target+"\r"+filePaths.src+"\n\rFound " + cssRules.length + " css rules in " + filePaths.src.length + " files";
 
 
 
@@ -61,6 +68,12 @@ module.exports = function (grunt) {
 //      // Print a success message.
 //      grunt.log.writeln('File "' + file.dest + '" created.');
     });
+
+    console.log(reportContent);
+
+    if (options.writeReport !== false)
+      grunt.file.write(options.writeReport, reportContent);
+
   });
 
 };

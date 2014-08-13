@@ -34,6 +34,9 @@ module.exports = function (grunt) {
     // Configuration to be run (and then tested).
     css_cleaner: {
       ui: {
+        options: {
+          writeReport: "test/css-cleaner-report.txt"
+        },
         files: {
           'tmp/scss': ['test/fixtures/**/*.*']
         }
