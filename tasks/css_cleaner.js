@@ -70,12 +70,9 @@ module.exports = function (grunt) {
         sources.push(abspath);
       }
     });
-
-    console.log ("Classes not used: ", cssRules.diff(rulesUsed));
-
     reportContent += "\r\n" + sources.length + " sources found";
-    reportContent += "\r\n\n** USED CLASSES ("+rulesUsed.length+")\r" + rulesUsed.join(", ");
-    reportContent += "\r\n\n** JUNK CLASSES ("+cssRules.diff(rulesUsed).length+")\r" + cssRules.diff(rulesUsed).join(", ");
+    reportContent += "\r\n\n** JUNK CLASSES ("+cssRules.diff(rulesUsed).length+")\r" + cssRules.diff(rulesUsed).join(",\r");
+    reportContent += "\r\n\n** USED CLASSES ("+rulesUsed.length+")\r" + rulesUsed.join(",\r");
 //
 //
 //    for (var usageType in this.data.templates) {
