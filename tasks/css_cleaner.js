@@ -70,6 +70,7 @@ module.exports = function (grunt) { 'use strict';
 
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
+      appRoot       : "./",
       writeReport   : false,
       templatesPath : ["./"],
       templatesType : ["html"],
@@ -108,7 +109,7 @@ module.exports = function (grunt) { 'use strict';
     var sources   = [];
     var rulesUsed = [];
 
-    grunt.file.recurse("./app", function (abspath, rootdir, subdir, filename) {
+    grunt.file.recurse(options.appRoot, function (abspath, rootdir, subdir, filename) {
       var fileExtension = filename.split(".")[filename.split(".").length - 1];
 
       options.templatesType.forEach( function (templateType) {
