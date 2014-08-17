@@ -1,9 +1,12 @@
 @import url(utils.less);
+@import url(markdown.less);
 
 @font-face {
   font-family: Bitter;
   src: url(../fonts/Bitter-Regular.ttf);
 }
+@import "http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic";
+
 * {
   font-family: Bitter;
 }
@@ -12,6 +15,10 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+
+  &.ready {
+    overflow-y: auto;
+  }
 
   .intro {
     position: absolute;
@@ -44,8 +51,6 @@ body {
   }
 
   .content {
-    .transition(all, .5s, ease-out);
-
     position: absolute;
     top: 50%;
     left: 0%;
@@ -73,13 +78,52 @@ body {
 
         .slide-content {
           .transition(opacity, .5s);
-
           padding: 0 3vw;
           opacity: 0;
 
-          p {
-            color: darken(@color-site-bg, 30);
-            font-size: 3vmin;
+          &.markdown {
+            text-align: left;
+
+            * {
+              font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+            }
+
+            h1 {
+              display: none;
+            }
+
+            h2 {
+              font-size: 4vw;
+              border-bottom: 5px solid darken(@color-site-bg, 30);
+              color: #fff;
+              padding-bottom: 1vw;
+              font-weight: 400;
+            }
+
+            h3 {
+              font-size: 3.5vw;
+              border-left: 3px solid darken(@color-site-bg, 30);
+              color: #fff;
+              padding-bottom: 1vw;
+              padding-left: 2vw;
+              font-weight: 400;
+            }
+
+            h4 {
+              font-size: 3vw;
+              color: darken(@color-site-bg, 30);
+              padding: 2vw 0 1vw;
+              font-weight: 400;
+            }
+
+            p {
+              color: #444;
+              font-size: 3vmin;
+            }
+
+            pre code {
+              font-family:'Noto Sans', sans-serif;
+            }
           }
         }
       }

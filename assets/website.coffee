@@ -24,8 +24,8 @@ $(document).ready ->
   $.ajax
     url: "http://bitterbrown.com/grunt-css-cleaner/readme.php"
     method: "get"
-    success: (content)->
-      $(".content .slide.slide2").html content
+    dataType: "html"
+    success: (content)-> $(".content .slide.slide2 .slide-content").html content
 
   # Content enter the screen
   keyframe 1, -> $(".content").css("opacity", 1).addClass "lightSpeedIn"
@@ -41,4 +41,6 @@ $(document).ready ->
 
   # Move up second slide
   keyframe 3.4, -> $(".content").css top: 10, margin: 0
-  keyframe 3.7, -> $(".content .slide2 .slide-content").css "opacity", 1
+  keyframe 4, -> $(".content .slide2 .slide-content").css "opacity", 1
+
+  keyframe 4.5, -> $("body").addClass "ready"

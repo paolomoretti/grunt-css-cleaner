@@ -28,8 +28,9 @@ $(document).ready(function() {
   $.ajax({
     url: "http://bitterbrown.com/grunt-css-cleaner/readme.php",
     method: "get",
+    dataType: "html",
     success: function(content) {
-      return $(".content .slide.slide2").html(content);
+      return $(".content .slide.slide2 .slide-content").html(content);
     }
   });
   keyframe(1, function() {
@@ -52,7 +53,10 @@ $(document).ready(function() {
       margin: 0
     });
   });
-  return keyframe(3.7, function() {
+  keyframe(4, function() {
     return $(".content .slide2 .slide-content").css("opacity", 1);
+  });
+  return keyframe(4.5, function() {
+    return $("body").addClass("ready");
   });
 });
