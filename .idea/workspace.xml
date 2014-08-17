@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65ef131d-fcc9-4f9a-b4d9-fb40284878bb" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/animate.css" afterPath="$PROJECT_DIR$/assets/css/animate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.less" afterPath="$PROJECT_DIR$/assets/css/style.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/website.coffee" afterPath="$PROJECT_DIR$/assets/website.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/website.js" afterPath="$PROJECT_DIR$/assets/website.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ba5f5e29-2a89-4384-a22f-f0cbd9d7a6ed" name="ignore" comment="" />
@@ -45,8 +39,8 @@
       <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48387095" vertical-offset="1425" max-vertical-offset="2280">
-              <caret line="116" column="13" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.23041475" vertical-offset="1425" max-vertical-offset="2280">
+              <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -368,7 +362,11 @@
       <created>1408298720034</created>
       <updated>1408298720034</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update style">
+      <created>1408301083619</created>
+      <updated>1408301083619</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -431,7 +429,8 @@
     <MESSAGE value="Update front page" />
     <MESSAGE value="adding assets" />
     <MESSAGE value="Taking content from readme file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Taking content from readme file" />
+    <MESSAGE value="Update style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -525,8 +524,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48387095" vertical-offset="1425" max-vertical-offset="2280">
-          <caret line="116" column="13" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.23041475" vertical-offset="1425" max-vertical-offset="2280">
+          <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
           <folding />
         </state>
       </provider>
