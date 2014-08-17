@@ -25,68 +25,74 @@ In your project's Gruntfile, add a section named `css_cleaner` to the data objec
 ```js
 grunt.initConfig({
   css_cleaner: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    taskname: {
+      options: {
+        // Task-specific options go here.
+      },
+      your_target: {
+        // Target-specific file lists and/or options go here.
+      }
+    }
   },
 })
 ```
+
+
+
 
 ### Options
 
-#### options.separator
+#### options.appRoot
 Type: `String`
-Default value: `',  '`
+Default value: `'./'`
 
-A string value that is used to do something with whatever.
+A reference to the root directory where to start the scan for templates/pages for CSS usage
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
+#### options.writeReport
+Type: `Boolean|String`
+Default value: `false`
 
-A string value that is used to do something else with whatever else.
+If the report has to be created, an absolute url and file name must be given. I.e. ./tmp/report.txt
 
-### Usage Examples
+#### options.templatesPath
+Type: `Array`
+Default value: `['./']`
+
+Specify a list of folders to look for app templates
+
+#### options.templatesType
+Type: `Array`
+Default value: `['html']`
+
+Specify all the extensions used for template files. i.e. ['html', 'jade']
+
+#### options.ignore
+Type: `Array`
+Default value: `[]`
+
+List of files/directories to ignore while scanning for css usage
+
+
+
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  css_cleaner: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
 
 ```js
 grunt.initConfig({
   css_cleaner: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      appRoot       : "./app/",
+      writeReport   : "tmp/junk-css-report.txt",
+      templatesPath : ["./app/templates", "./website/templates"],
+      templatesType : ["jade", "slim"],
+      ignore        : ["./app/images/"]
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'app_ui': ['./app/assets/css'],
     },
   },
 })
 ```
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
 
 ## License
 Copyright (c) 2014 Paolo Moretti. Licensed under the MIT license.
