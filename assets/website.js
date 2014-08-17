@@ -25,6 +25,13 @@ keyframe = function(time, callback) {
 };
 
 $(document).ready(function() {
+  $.ajax({
+    url: "http://bitterbrown.com/grunt-css-cleaner/readme.php",
+    method: "get",
+    success: function(content) {
+      return $(".content .slide.slide2").html(content);
+    }
+  });
   keyframe(1, function() {
     return $(".content").css("opacity", 1).addClass("lightSpeedIn");
   });

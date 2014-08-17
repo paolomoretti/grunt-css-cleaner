@@ -21,6 +21,12 @@ keyframe = (time, callback)->
 
 $(document).ready ->
 
+  $.ajax
+    url: "http://bitterbrown.com/grunt-css-cleaner/readme.php"
+    method: "get"
+    success: (content)->
+      $(".content .slide.slide2").html content
+
   # Content enter the screen
   keyframe 1, -> $(".content").css("opacity", 1).addClass "lightSpeedIn"
   keyframe 1.1, -> cleanIt $(".intro pre")
