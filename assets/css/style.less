@@ -1,0 +1,103 @@
+@import url(utils.less);
+
+@font-face {
+  font-family: Bitter;
+  src: url(../fonts/Bitter-Regular.ttf);
+}
+* {
+  font-family: Bitter;
+}
+body {
+  background: @color-site-bg;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+
+  .intro {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-top: -13vw;
+    z-index: 2;
+
+    pre {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 4vmax;
+      text-align: left;
+      font-family: "Courier New";
+      font-weight: bold;
+
+      span {
+        .transition(all, .25s, ease-out);
+
+        left: 0;
+        top: 0;
+        position: relative;
+        color: inherit;
+      }
+    }
+  }
+
+  .content {
+    .transition(all, .5s, ease-out);
+
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-top: -13vw;
+    z-index: 3;
+
+    .slide {
+      display: inline-block;
+
+      h1 {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 5vw;
+        font-size: 6vw;
+        white-space: nowrap;
+        background: @color-bg-highlight;
+      }
+
+      &.slide2 {
+        display: none;
+
+        .slide-content {
+          .transition(opacity, .5s);
+
+          padding: 0 3vw;
+          opacity: 0;
+
+          p {
+            color: darken(@color-site-bg, 30);
+            font-size: 3vmin;
+          }
+        }
+      }
+    }
+
+  }
+
+  a.author {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2vw;
+    font-size: 13px;
+    color: #38888e;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
