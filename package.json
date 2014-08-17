@@ -1,6 +1,6 @@
 {
   "name": "grunt-css-cleaner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Clean your unused css classes from your app",
   "homepage": "http://www.bitterbrown.com/grunt-css-cleaner",
   "repository": "git@github.com:Bitterbrown/grunt-css-cleaner.git",
