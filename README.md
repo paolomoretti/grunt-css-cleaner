@@ -2,6 +2,12 @@
 
 > Clean your unused css classes from your app
 
+This plugin is not actually removing your css classes from your files (less, sass, css, ...) but it's (at the moment) creating a safe report with all your "unused" classes.
+
+**Grunt-css-cleaner** it's not running your app and attempt to navigate all pages to see used css rules, it's looping through your local files grabbing all css definitions (classes) and trying to find a reference in your template files.
+If there is no reference, then it's marked as JUNK.
+
+
 ## Getting Started
 This plugin requires Grunt.
 
